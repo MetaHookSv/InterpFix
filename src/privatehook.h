@@ -3,6 +3,6 @@
 namespace interpfix
 {
 constexpr int RequiredMetaHookAPIVersion = 109;
-bool InstallHooks();
-void UninstallHooks();
-}
+bool          InstallHooks();
+void          UninstallHooks();
+} // namespace interpfix
