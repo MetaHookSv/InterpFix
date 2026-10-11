@@ -21,9 +21,11 @@ include(cmake/Dependencies.cmake)
 interpfix_prepare_dependencies()
 include("${VC_LTL_Root}/VC-LTL helper for cmake.cmake")
 include(cmake/SDK.cmake)
+include(cmake/SourceGroups.cmake)
 add_library(InterpFix SHARED
     src/plugins.cpp src/privatehook.cpp src/interpolation.cpp
     "${METAHOOK_SOURCE_PATH}/include/HLSDK/common/interface.cpp")
+interpfix_assign_source_groups(InterpFix)
 interpfix_use_sdk(InterpFix)
 target_compile_definitions(InterpFix PRIVATE WIN32 _WINDOWS _USRDLL _MBCS)
 target_compile_options(InterpFix PRIVATE /MP /Zi /W3 /wd4311 /wd4312 /wd4819 /wd4996)
