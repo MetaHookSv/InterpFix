@@ -19,7 +19,6 @@ elseif(NOT CMAKE_BUILD_TYPE MATCHES "^(Debug|Release)$")
 endif()
 include(cmake/Dependencies.cmake)
 interpfix_prepare_dependencies()
-include("${VC_LTL_Root}/VC-LTL helper for cmake.cmake")
 include(cmake/SDK.cmake)
 include(cmake/SourceGroups.cmake)
 add_library(InterpFix SHARED
